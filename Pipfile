@@ -1,0 +1,18 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+certifi = "*"
+chardet = "*"
+colorama = "*"
+configparser = "*"
+crayons = "*"
+idna = "*"
+requests = "*"
+selenium = "*"
+urllib3 = "*"
+webdriver-manager = "*"
+webdriver-setup = "*"
+
