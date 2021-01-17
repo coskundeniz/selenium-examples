@@ -1,4 +1,3 @@
-from selenium.webdriver.common.keys import Keys
 from webdriver_setup import get_webdriver_for
 from time import sleep
 
