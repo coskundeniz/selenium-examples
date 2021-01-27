@@ -1,5 +1,5 @@
 from selenium.webdriver import FirefoxOptions
-from webdriver_setup.get_webdriver import get_webdriver_for
+from webdriver_setup import get_webdriver_for
 
 firefox_options = FirefoxOptions()
 firefox_options.add_argument("--headless")

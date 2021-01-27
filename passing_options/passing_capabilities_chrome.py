@@ -1,5 +1,5 @@
 from selenium.webdriver import ChromeOptions, DesiredCapabilities
-from webdriver_setup.get_webdriver import get_webdriver_for
+from webdriver_setup import get_webdriver_for
 from time import sleep
 
 chrome_options = ChromeOptions()
