@@ -1,4 +1,4 @@
-from webdriver_setup.get_webdriver import get_webdriver_for
+from webdriver_setup import get_webdriver_for
 from time import sleep
 
 driver = get_webdriver_for("firefox")
