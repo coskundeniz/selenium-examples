@@ -109,7 +109,9 @@ def create_webdriver(browser, proxy_config):
     elif browser == "chrome":
         chrome_options = ChromeOptions()
         chrome_options.headless = True
-        driver = get_webdriver_for(browser, options=chrome_options, desired_capabilities=proxy_config)
+        driver = get_webdriver_for(
+            browser, options=chrome_options, desired_capabilities=proxy_config
+        )
 
     return driver
 
@@ -146,7 +148,7 @@ def main():
 
     browser = "chrome"
 
-    for _ in range(10):
+    for _ in range(5):
         proxy = next(proxy_pool)
         proxy_config = setup_proxy(browser, proxy)
         make_request_with_proxy(browser, proxy_config)
@@ -155,4 +157,3 @@ def main():
 if __name__ == "__main__":
 
     main()
-
