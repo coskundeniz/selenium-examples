@@ -16,13 +16,13 @@ os.environ["WDM_LOG_LEVEL"] = "0"
 
 
 def get_proxies():
-    """Return list of proxies that are elite proxy and has https support
+    """Return list of elite proxies
 
     :rtype: list
     :returns: List of proxies
     """
 
-    url = "https://free-proxy-list.net/"
+    url = "https://www.sslproxies.org/"
 
     response = requests.get(url)
     parsed_page = BeautifulSoup(response.content, "html.parser")
@@ -38,9 +38,8 @@ def get_proxies():
     for row in rows_for_last_hour:
 
         anonymity = row.select("td:nth-child(5)")[0].text
-        https_support = row.select("td:nth-child(7)")[0].text
 
-        if "elite" in anonymity and https_support == "yes":
+        if "elite" in anonymity:
             host = row.select("td:first-child")[0].text
             port = row.select("td:nth-child(2)")[0].text
             proxy = f"{host}:{port}"
